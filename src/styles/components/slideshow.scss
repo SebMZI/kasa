@@ -10,22 +10,31 @@
   );
   margin-top: 20px;
   border-radius: 25px;
-  .arrow {
-    width: 70px;
-    cursor: pointer;
-    transition: transform 0.4s;
-    &-left {
-      position: absolute;
-      top: 40%;
-      left: 0;
+  .sup-container {
+    .arrow {
+      width: 70px;
+      cursor: pointer;
+      transition: transform 0.4s;
+      &-left {
+        position: absolute;
+        top: 40%;
+        left: 0;
+      }
+      &-right {
+        position: absolute;
+        top: 40%;
+        right: 0;
+      }
+      &:hover {
+        transform: scale(1.07);
+      }
     }
-    &-right {
+    .banner-number {
       position: absolute;
-      top: 40%;
-      right: 0;
-    }
-    &:hover {
-      transform: scale(1.07);
+      bottom: 25px;
+      left: 50%;
+      color: #ffffff;
+      font-size: 18px;
     }
   }
 

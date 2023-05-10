@@ -28,19 +28,26 @@ const SlideShow = (images) => {
   console.log(counter);
   return (
     <div className="slider-container">
-      <img
-        onClick={() => slideLeft()}
-        className="arrow arrow-left"
-        src={chevronLeft}
-        alt="arrow left"
-      />
       <img className="banner-img" src={actualImage} alt="" />
-      <img
-        onClick={() => slideRight()}
-        className="arrow arrow-right"
-        src={chevronRight}
-        alt="arrow right"
-      />
+      {slideLength === 1 ? null : (
+        <div className="sup-container">
+          <img
+            onClick={() => slideLeft()}
+            className="arrow arrow-left"
+            src={chevronLeft}
+            alt="arrow left"
+          />
+          <p className="banner-number">
+            {counter + 1}/{slideLength}
+          </p>
+          <img
+            onClick={() => slideRight()}
+            className="arrow arrow-right"
+            src={chevronRight}
+            alt="arrow right"
+          />{" "}
+        </div>
+      )}
     </div>
   );
 };
