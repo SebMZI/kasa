@@ -1,7 +1,9 @@
 import React, { useState } from "react";
+import chevronUp from "../assets/chevron-up.png";
+import chevronDown from "../assets/chevron-down.png";
 
 const Collapse = ({ title, content }) => {
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
   return isOpen ? (
     <div className="collapse-container">
       <div className="collapse">
@@ -9,7 +11,7 @@ const Collapse = ({ title, content }) => {
           <h2 className="collapse-title">{title}</h2>
           <img
             className="collapse-chevron"
-            src={isOpen ? "./chevron-up.png" : "./chevron-down.png"}
+            src={isOpen ? chevronUp : chevronDown}
             alt="Chevron"
           />
         </div>
@@ -23,7 +25,7 @@ const Collapse = ({ title, content }) => {
           <h2 className="collapse-title">{title}</h2>
           <img
             className="collapse-chevron"
-            src={isOpen ? "./chevron-up.png" : "./chevron-down.png"}
+            src={isOpen ? chevronUp : chevronDown}
             alt="Chevron"
           />
         </div>

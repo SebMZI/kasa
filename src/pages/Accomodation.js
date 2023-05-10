@@ -1,52 +1,131 @@
-import React from "react";
-import { useParams } from "react-router-dom";
+import React, { useEffect } from "react";
+import { useNavigate, useParams } from "react-router-dom";
 import datalist from "../data/db.json";
 import SlideShow from "../components/SlideShow";
 import Header from "../components/Header";
+import Collapse from "../components/Collapse";
+import Footer from "../components/Footer";
+import star from "../assets/filled-star.png";
+import emptyStars from "../assets/empty-star.png";
 
 const Accomodation = () => {
+  const navigate = useNavigate();
   const params = useParams();
   const id = params.id;
   const selectedItem = datalist.find((item) => item.id === id);
+
+  useEffect(() => {
+    if (!selectedItem) {
+      console.log("Aucun élément correspondant à l'ID trouvé.");
+      navigate("/erreur");
+    }
+  }, [selectedItem, navigate]);
 
   if (selectedItem) {
     // Vous pouvez maintenant accéder aux autres propriétés de l'élément sélectionné
     const title = selectedItem.title;
     const pictures = selectedItem.pictures;
     const description = selectedItem.description;
-    // const host = selectedItem.host;
-    //const rating = selectedItem.rating;
-    //const location = selectedItem.location;
+    const host = selectedItem.host;
+    const rating = selectedItem.rating;
+    const location = selectedItem.location;
     const equipments = selectedItem.equipments;
-    //const tags = selectedItem.tags;
+    const tags = selectedItem.tags;
+
+    const numberStars = parseInt(rating);
+    const stars = [];
+
+    for (let i = 0; i < numberStars; i++) {
+      stars.push(
+        <img src={star} alt="note sur 5" key={i} className="star filled-star" />
+      );
+    }
 
     return (
       <div>
-        <Header />
-        <SlideShow images={pictures} />
-        <h1>{title}</h1>
-        <p>{description}</p>
-        <ul>
-          {equipments.map((equipement, index) => (
-            <li key={index}>{equipement}</li>
-          ))}
-        </ul>
+        <div className="accomodation-container">
+          <Header />
+          <SlideShow images={pictures} />
+          <div className="accomodation">
+            <div className="accomodation-header">
+              <h1 className="accomodation-title">{title}</h1>
+              <h2 className="accomodation-location">{location}</h2>
+            </div>
+
+            <div className="accomodation-host">
+              <p>{host.name}</p>
+              <img src={host.picture} alt={"photo de profil de " + host.name} />
+            </div>
+          </div>
+          <div className="accomodation-tags-stars">
+            <ul className="tags">
+              {tags.map((tag, index) => (
+                <li className="accomodation-tag" key={index}>
+                  {tag}
+                </li>
+              ))}
+            </ul>
+            <div className="accomodation-stars">
+              <div className=" filled-star-container ">{stars}</div>
+              <div className=" empty-star-container">
+                <img
+                  src={emptyStars}
+                  alt="pas de note"
+                  className="star empty-star"
+                />
+                <img
+                  src={emptyStars}
+                  alt="pas de note"
+                  className="star empty-star"
+                />
+                <img
+                  src={emptyStars}
+                  alt="pas de note"
+                  className="star empty-star"
+                />
+                <img
+                  src={emptyStars}
+                  alt="pas de note"
+                  className="star empty-star"
+                />
+                <img
+                  src={emptyStars}
+                  alt="pas de note"
+                  className="star empty-star"
+                />
+              </div>
+            </div>
+          </div>
+          <div className="accomodation-collapse-container">
+            <Collapse
+              title="Description"
+              content={description}
+              className="accomodation-collaspe"
+            />
+            <Collapse
+              title="Équipments"
+              content={
+                <ul className="accomodation-equipement">
+                  {equipments.map((equipment, index) => (
+                    <li key={index} className="equipement">
+                      {equipment}
+                    </li>
+                  ))}
+                </ul>
+              }
+              className="accomodation-collaspe"
+            />
+          </div>
+        </div>
+        <Footer />
       </div>
     );
-
-    // Faites ce que vous voulez avec ces données, par exemple :
-    // console.log(title);
-    // console.log(cover);
-    // console.log(pictures);
-    // console.log(description);
-    // console.log(host);
-    // console.log(rating);
-    // console.log(location);
-    // console.log(equipments);
-    // console.log(tags);
-  } else {
-    console.log("Aucun élément correspondant à l'ID trouvé.");
   }
+  //else {
+  //   console.log("Aucun élément correspondant à l'ID trouvé.");
+  //   navigate("/erreur");
+  //   return null;
+  // }
 };
 
 export default Accomodation;

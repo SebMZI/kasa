@@ -28,7 +28,11 @@ const SlideShow = (images) => {
   console.log(counter);
   return (
     <div className="slider-container">
-      <img className="banner-img" src={actualImage} alt="" />
+      <img
+        className="banner-img"
+        src={actualImage}
+        alt="Image chambre d'un hôte"
+      />
       {slideLength === 1 ? null : (
         <div className="sup-container">
           <img
