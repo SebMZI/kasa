@@ -1,0 +1,69 @@
+.kasa-banner {
+  position: relative;
+  margin: 40px auto;
+  width: 1240px;
+  height: 223px;
+  z-index: 7;
+
+  img {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 25px;
+  }
+
+  .overlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    mix-blend-mode: darken;
+    opacity: 0.3;
+    z-index: 3;
+    background: #000000;
+    border-radius: 25px;
+  }
+  .banner-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    z-index: 4;
+    h1 {
+      color: #ffffff;
+      font-size: 48px;
+      font-weight: 500;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .kasa-banner {
+    margin: 20px auto 0px auto;
+    width: 335px;
+    height: 111px;
+    border-radius: 10px;
+    .overlay,
+    img {
+      border-radius: 10px;
+    }
+    .banner-text {
+      display: block;
+      padding: 25px 16px;
+
+      h1 {
+        font-size: 24px;
+        .line-break {
+          display: block;
+          content: "";
+          clear: both;
+        }
+      }
+    }
+  }
+}

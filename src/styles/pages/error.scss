@@ -1,0 +1,51 @@
+.error {
+  width: 100vw;
+  height: 60vh;
+  .error-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    color: #ff6060;
+    h1 {
+      font-size: 288px;
+      font-weight: 700;
+    }
+    h2 {
+      font-size: 36px;
+      font-weight: 500;
+    }
+  }
+
+  .error-redirect {
+    display: block;
+    margin: 100px auto 188px auto;
+    color: #ff6060;
+    font-size: 18px;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .error {
+    .error-container {
+      h1 {
+        font-size: 98px;
+      }
+      h2 {
+        font-size: 18px;
+        .line-break {
+          display: block;
+          content: "";
+          clear: both;
+        }
+      }
+    }
+    .error-redirect {
+      font-size: 14px;
+    }
+  }
+}
