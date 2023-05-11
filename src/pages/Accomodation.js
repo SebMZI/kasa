@@ -65,33 +65,42 @@ const Accomodation = () => {
                 </li>
               ))}
             </ul>
-            <div className="accomodation-stars">
-              <div className=" filled-star-container ">{stars}</div>
-              <div className=" empty-star-container">
+            <div className="acc-stars-host">
+              <div className="accomodation-stars">
+                <div className=" filled-star-container ">{stars}</div>
+                <div className=" empty-star-container">
+                  <img
+                    src={emptyStars}
+                    alt="pas de note"
+                    className="star empty-star"
+                  />
+                  <img
+                    src={emptyStars}
+                    alt="pas de note"
+                    className="star empty-star"
+                  />
+                  <img
+                    src={emptyStars}
+                    alt="pas de note"
+                    className="star empty-star"
+                  />
+                  <img
+                    src={emptyStars}
+                    alt="pas de note"
+                    className="star empty-star"
+                  />
+                  <img
+                    src={emptyStars}
+                    alt="pas de note"
+                    className="star empty-star"
+                  />
+                </div>
+              </div>
+              <div className="accomodation-host-mobile">
+                <p>{host.name}</p>
                 <img
-                  src={emptyStars}
-                  alt="pas de note"
-                  className="star empty-star"
-                />
-                <img
-                  src={emptyStars}
-                  alt="pas de note"
-                  className="star empty-star"
-                />
-                <img
-                  src={emptyStars}
-                  alt="pas de note"
-                  className="star empty-star"
-                />
-                <img
-                  src={emptyStars}
-                  alt="pas de note"
-                  className="star empty-star"
-                />
-                <img
-                  src={emptyStars}
-                  alt="pas de note"
-                  className="star empty-star"
+                  src={host.picture}
+                  alt={"photo de profil de " + host.name}
                 />
               </div>
             </div>

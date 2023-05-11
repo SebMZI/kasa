@@ -45,3 +45,39 @@
     border-radius: 25px;
   }
 }
+
+@media screen and (max-width: 425px) {
+  .slider-container {
+    margin: 27px auto;
+    padding: 0 20px;
+    background: none;
+    width: 100%;
+    height: 255px;
+    .sup-container {
+      .arrow {
+        width: 40px;
+        &-left,
+        &-right {
+          top: 42.5%;
+        }
+
+        &-left {
+          left: 20px;
+        }
+        &-right {
+          right: 20px;
+        }
+      }
+    }
+  }
+
+  .banner-number {
+    display: none;
+  }
+
+  .sup-container {
+    .arrow {
+      width: 10%;
+    }
+  }
+}

@@ -39,7 +39,7 @@
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 425px) {
   .collapse-container {
     margin: 0 20px;
     .collapse {
@@ -57,7 +57,7 @@
     }
     .collapse-content {
       width: auto;
-      padding: 18px 0px 18px 18px;
+      padding: 30px 0px 18px 18px;
       font-size: 12px;
     }
   }

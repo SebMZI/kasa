@@ -81,6 +81,9 @@
           left: 0;
         }
       }
+      .accomodation-host-mobile {
+        display: none;
+      }
     }
   }
   .accomodation-collapse-container {
@@ -102,6 +105,99 @@
           .equipement {
             margin-bottom: 5px;
           }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .accomodation-container {
+    position: relative;
+    .accomodation {
+      padding: 0 20px;
+      .accomodation-header {
+        .accomodation-title {
+          font-size: 18px;
+        }
+        .accomodation-location {
+          font-size: 14px;
+        }
+      }
+
+      &-host {
+        display: none;
+      }
+      &-tags-stars {
+        width: 100%;
+        margin: 0 auto;
+        padding: 0 20px;
+        align-items: flex-start;
+        flex-direction: column;
+        .tags {
+          width: 335px;
+          margin-bottom: 16px;
+          flex-wrap: wrap;
+          justify-content: flex-start;
+          align-items: center;
+          row-gap: 10px;
+
+          .accomodation-tag {
+            font-size: 10px;
+            height: 18px;
+            min-width: 84px;
+            padding: 0 15px;
+          }
+        }
+        .acc-stars-host {
+          width: 100%;
+          margin: 0 auto;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+
+          .accomodation-stars {
+            .star {
+              width: 13px;
+              margin-left: 0;
+              margin-right: 7px;
+            }
+          }
+          .accomodation-host-mobile {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            p {
+              width: 70px;
+              text-align: right;
+              font-size: 12px;
+              color: #ff6060;
+            }
+            img {
+              width: 32px;
+              height: 32px;
+              margin-left: 10px;
+              border-radius: 50px;
+            }
+          }
+        }
+      }
+    }
+    .accomodation-collapse-container {
+      flex-direction: column;
+      .collapse-container {
+        margin: 0 auto;
+        width: 100%;
+        padding: 0 20px;
+        .collapse {
+          width: 100%;
+        }
+        .collapse-content {
+          min-height: 145px;
+          padding-top: 33px;
+          padding-bottom: 15px;
+          width: 335px;
+          font-size: 14px;
         }
       }
     }
