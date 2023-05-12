@@ -1,7 +1,8 @@
 .slider-container {
   position: relative;
   margin: auto;
-  width: 1240px;
+  max-width: 1240px;
+  width: auto;
   height: 415px;
   background: linear-gradient(
     180deg,
@@ -46,21 +47,11 @@
   }
 }
 
-// @media screen and (min-width: 425px) and (max-width: 768px) {
-//   .kasa-banner {
-//     width: 100%;
-//     margin-right: 20px;
-//     margin-left: 20px;
-//     img {
-//       max-width: 768px;
-
-//       margin: auto;
-//     }
-//     .banner-text h1 {
-//       font-size: 36px;
-//     }
-//   }
-// }
+@media screen and (min-width: 425px) and (max-width: 1024px) {
+  .slider-container {
+    margin: 20px 20px;
+  }
+}
 
 @media screen and (max-width: 425px) {
   .slider-container {

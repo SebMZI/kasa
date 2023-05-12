@@ -2,7 +2,8 @@
   .collapse {
     margin: 31px auto;
     padding: 0px 15px;
-    width: 1023px;
+    max-width: 1024px;
+    width: auto;
     height: 47px;
     background-color: #ff6060;
     border-radius: 5px;
@@ -28,14 +29,26 @@
     position: relative;
     top: -38px;
     z-index: -1;
-    width: 1023px;
-    padding: 35px 0px 35px 18px;
+    max-width: 1023px;
+    width: auto;
+    padding: 35px 18px 35px 18px;
     margin: auto;
     background-color: #f7f7f7;
     color: #ff6060;
     font-size: 24px;
     font-weight: 400;
     border-radius: 5px;
+  }
+}
+
+@media screen and (min-width: 425px) and (max-width: 1024px) {
+  .collapse-container {
+    .collapse {
+      margin: 20px 20px;
+    }
+    .collapse-content {
+      margin: 0 20px;
+    }
   }
 }
 
