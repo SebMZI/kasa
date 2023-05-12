@@ -41,6 +41,8 @@ const Accomodation = () => {
       );
     }
 
+    document.title = "Kasa - " + title + " par " + host.name;
+
     return (
       <div>
         <div className="accomodation-container">

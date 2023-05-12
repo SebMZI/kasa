@@ -5,6 +5,7 @@ import Card from "../components/Card";
 import Footer from "../components/Footer";
 
 const Home = () => {
+  document.title = "Kasa - Accueil";
   return (
     <div>
       <Header />

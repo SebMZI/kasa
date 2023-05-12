@@ -5,6 +5,8 @@ import Collapse from "../components/Collapse";
 import Footer from "../components/Footer";
 
 const About = () => {
+  document.title = "Kasa - A propos";
+
   return (
     <div>
       <Header />

@@ -28,8 +28,20 @@
   }
 }
 
+// @media screen and (min-width: 425px) and (max-width: 768px) {
+//   .kasa-header {
+//     max-width: 768px;
+//     width: 100%;
+//     padding: 40px 20px;
+//     justify-content: space-between;
+//   }
+// }
+
 @media screen and (max-width: 425px) {
   .kasa-header {
+    max-width: 425px;
+    width: 100%;
+    margin: auto;
     padding-left: 20px;
     padding-right: 20px;
     img {
