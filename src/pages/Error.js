@@ -1,11 +1,9 @@
 import React from "react";
-import Header from "../components/Header";
 
 const Error = () => {
   document.title = "Kasa - Erreur 404";
   return (
     <div className="error">
-      <Header />
       <div className="error-container">
         <h1>404</h1>
         <h2>

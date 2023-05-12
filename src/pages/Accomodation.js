@@ -2,9 +2,9 @@ import React, { useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import datalist from "../data/db.json";
 import SlideShow from "../components/SlideShow";
-import Header from "../components/Header";
+
 import Collapse from "../components/Collapse";
-import Footer from "../components/Footer";
+
 import star from "../assets/filled-star.png";
 import emptyStars from "../assets/empty-star.png";
 
@@ -46,7 +46,6 @@ const Accomodation = () => {
     return (
       <div>
         <div className="accomodation-container">
-          <Header />
           <SlideShow images={pictures} />
           <div className="accomodation">
             <div className="accomodation-header">
@@ -128,7 +127,6 @@ const Accomodation = () => {
             />
           </div>
         </div>
-        <Footer />
       </div>
     );
   }

@@ -1,15 +1,13 @@
 import React from "react";
-import Header from "../components/Header";
+
 import Banner from "../components/Banner";
 import Collapse from "../components/Collapse";
-import Footer from "../components/Footer";
 
 const About = () => {
   document.title = "Kasa - A propos";
 
   return (
     <div>
-      <Header />
       <Banner />
       <div className="about-container">
         <Collapse
@@ -29,7 +27,6 @@ const About = () => {
           content="La sécurité est la priorité de Kasa. Aussi bien pour nos hôtes que pour les voyageurs, chaque logement correspond aux critères de sécurité établis par nos services. En laissant une note aussi bien à l'hôte qu'au locataire, cela permet à nos équipes de vérifier que les standards sont bien respectés. Nous organisons également des ateliers sur la sécurité domestique pour nos hôtes."
         />
       </div>
-      <Footer />
     </div>
   );
 };
