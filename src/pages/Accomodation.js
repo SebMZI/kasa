@@ -113,7 +113,7 @@ const Accomodation = () => {
               className="accomodation-collaspe"
             />
             <Collapse
-              title="Équipments"
+              title="Équipements"
               content={
                 <ul className="accomodation-equipement">
                   {equipments.map((equipment, index) => (

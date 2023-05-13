@@ -7,9 +7,13 @@
   max-width: 1240px;
   width: 100%;
   margin: auto;
+  img {
+    animation: Headerleft 1.4s forwards;
+  }
 }
 
 .kasa-nav {
+  animation: Headerright 1.4s forwards;
   ul {
     display: flex;
     flex-direction: row;
@@ -25,6 +29,28 @@
         border-bottom: 1px solid #ff6060;
       }
     }
+  }
+}
+
+@keyframes Headerleft {
+  0% {
+    transform: translateX(-120px);
+    visibility: hidden;
+  }
+  100% {
+    transform: translateX(0);
+    visibility: visible;
+  }
+}
+
+@keyframes Headerright {
+  0% {
+    transform: translateX(120px);
+    visibility: hidden;
+  }
+  100% {
+    transform: translateX(0);
+    visibility: visible;
   }
 }
 
