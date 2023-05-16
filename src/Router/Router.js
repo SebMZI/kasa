@@ -16,7 +16,6 @@ const Router = () => {
         <Route path="/a-propos" element={<About />} />
         <Route path="/logement/:id" element={<Accomodation />} />
         <Route path="*" element={<Error />} />
-        <Route path="/erreur" element={<Error />} />
       </Routes>
       <Footer />
     </BrowserRouter>

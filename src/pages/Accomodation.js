@@ -14,15 +14,15 @@ const Accomodation = () => {
   const id = params.id;
   const selectedItem = datalist.find((item) => item.id === id);
 
+  // Renvoi sur la page erreur si l'id est introuvable
   useEffect(() => {
     if (!selectedItem) {
       console.log("Aucun élément correspondant à l'ID trouvé.");
-      navigate("/erreur");
+      navigate("*");
     }
   }, [selectedItem, navigate]);
 
   if (selectedItem) {
-    // Vous pouvez maintenant accéder aux autres propriétés de l'élément sélectionné
     const title = selectedItem.title;
     const pictures = selectedItem.pictures;
     const description = selectedItem.description;
@@ -31,16 +31,17 @@ const Accomodation = () => {
     const location = selectedItem.location;
     const equipments = selectedItem.equipments;
     const tags = selectedItem.tags;
-
     const numberStars = parseInt(rating);
     const stars = [];
 
+    // Génère les étoiles en fonction de rating et les stocke dans un array
     for (let i = 0; i < numberStars; i++) {
       stars.push(
         <img src={star} alt="note sur 5" key={i} className="star filled-star" />
       );
     }
 
+    // Modication du titre de l'onglet
     document.title = "Kasa - " + title + " par " + host.name;
 
     return (
